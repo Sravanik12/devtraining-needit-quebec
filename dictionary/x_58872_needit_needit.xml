@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Artifact" max_length="40" name="artifact" type="boolean"/>
+        <element label="Group Manager" max_length="30" name="group_manager" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="IT" label="Request typee" mandatory="true" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element inactive_on_update="false" label="IT Team" sequence="0" value="IT"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="1" value="HR"/>
+                <element inactive_on_update="false" label="Service Management" sequence="2" value="SM"/>
+                <element inactive_on_update="false" label="Finance" sequence="3" value="finance"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="IT 1" label="What needed" mandatory="true" max_length="40" name="u_choice_5" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Service Management" sequence="0" value="SM 1"/>
+                <element inactive_on_update="false" label="Service Management" sequence="1" value="SM 2"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="2" value="HR 1"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="3" value="HR 2"/>
+                <element inactive_on_update="false" label="IT Team" sequence="4" value="IT 1"/>
+                <element inactive_on_update="false" label="IT Team" sequence="5" value="IT 2"/>
+                <element inactive_on_update="false" label="Finances" sequence="6" value="F1"/>
+                <element inactive_on_update="false" label="Finances" sequence="7" value="F2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_4" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_reference_2" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
